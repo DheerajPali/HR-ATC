@@ -1,6 +1,6 @@
-import { Select, Button } from "antd";
+import { Select, Upload } from "antd";
 import { Link } from "react-router-dom";
-
+import { InboxOutlined } from "@ant-design/icons";
 const departmentOptions = [
   { value: "Marketing", label: "Marketing" },
   {
@@ -50,6 +50,8 @@ const yeatOption = [
   { value: "2028", label: "2028" },
 ];
 
+const { Dragger } = Upload;
+
 const UploadResume = () => {
   return (
     <>
@@ -97,6 +99,17 @@ const UploadResume = () => {
             </div>
           </div>
 
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mt-10">
+            <Dragger className="uploadedDoc">
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">Drap and drop files here</p>
+              <p className="ant-upload-hint">
+                Limited 200 MB per files - DOCX, PDF
+              </p>
+            </Dragger>
+          </div>
           {/* Navigation Buttons */}
           <div className="mt-10 flex justify-between">
             <Link to={"/foldermanagement"} className="backBtn">
