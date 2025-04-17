@@ -123,3 +123,31 @@
     letter-spacing: 0.5px;
     font-weight: 700;
 }
+
+.topResultContainer {
+    width: 25%;
+}
+
+
+/* Grid Header */
+
+.MuiPaper-rootMuiPaper-elevation.MuiPaper-rounded {
+    border-radius: 0px;
+}
+
+.muiDashboard .MuiTableCell-head.MuiTableCell-stickyHeader .Mui-TableHeadCell-Content {
+    justify-content: center !important;
+}
+
+.muiDashboard .MuiTableCell-head.MuiTableCell-stickyHeader .Mui-TableHeadCell-Content .MuiBadge-root {
+    display: none
+}
+
+.muiDashboard .MuiTableCell-head.MuiTableCell-stickyHeader .Mui-TableHeadCell-Content-Actions {
+    display: none;
+}
+
+/* datePicker */
+.datePickerContainer .ant-picker.ant-picker-outlined {
+    width: 288px;
+}

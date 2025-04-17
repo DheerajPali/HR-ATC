@@ -245,7 +245,27 @@ const Comparison = () => {
         />
       </div>
 
-      <div className="w-full max-w-[1250px] mx-auto rounded-xl mb-12"></div>
+      <div className="w-full max-w-[1250px] mx-auto rounded-xl mb-12">
+        <div className="topResultContainer">
+          <label>Filter Top-Rated Results</label>
+          <Select
+            placeholder="Select Top Rated Results"
+            className="drpFolderManagement mt-2"
+            style={{ width: "100%" }}
+            options={yeatOption}
+          />
+        </div>
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5 mb-5">
+        <Link to={"/uploadresume"} className="backBtn">
+          Back
+        </Link>
+        <Link to={"/SendInvitation"} className="btn">
+          Next
+        </Link>
+      </div>
     </>
   );
 };
