@@ -22,18 +22,6 @@ const headings = [
   "Experience",
 ];
 
-const experiences = [
-  "N/A",
-  "5 Years",
-  "3 Years",
-  "4 Years",
-  "N/A",
-  "5 Years",
-  "N/A",
-  "10 Years",
-  "2 Years",
-];
-
 const departmentOptions = [
   { value: "Marketing", label: "Marketing" },
   {
@@ -436,7 +424,7 @@ const HrAssitant = () => {
       </div>
 
       {/*Comments */}
-      <div className="mb-6 w-full px-4 sm:px-6 md:px-8">
+      <div className="mx-auto mb-6 w-full px-4 sm:px-4 md:px-8">
         <div className="w-full max-w-[1250px] mx-auto">
           <label
             htmlFor="candidateComments"
@@ -452,6 +440,8 @@ const HrAssitant = () => {
           />
         </div>
       </div>
+
+      {/*Table Section */}
       <div className="py-10 px-4 sm:px-10 md:px-20">
         <div className="w-full max-w-[1250px] mx-auto">
           <Typography
@@ -460,8 +450,15 @@ const HrAssitant = () => {
           >
             Candidates Data
           </Typography>
-          <div className="w-full max-w-[1250px] mx-auto rounded-xl bg-white shadow-md ">
-            <TableContainer component={Paper} sx={{ maxHeight: 440 }}>
+          <div className="w-full max-w-[1250px] mx-auto rounded-xl bg-white ">
+            <TableContainer
+              component={Paper}
+              sx={{
+                maxHeight: 440,
+                boxShadow: "none",
+                borderBottom: "none",
+              }}
+            >
               <Table stickyHeader aria-label="candidates table">
                 <TableHead>
                   <TableRow>
@@ -469,9 +466,10 @@ const HrAssitant = () => {
                       <TableCell
                         key={idx}
                         sx={{
-                          fontWeight: 500,
+                          fontWeight: 600,
                           color: "#374151",
                           whiteSpace: "nowrap",
+                          backgroundColor: "#f9fafb",
                         }}
                       >
                         {heading}
@@ -482,7 +480,13 @@ const HrAssitant = () => {
 
                 <TableBody>
                   {candidatesData.map((candidate, idx) => (
-                    <TableRow key={idx} hover>
+                    <TableRow
+                      key={idx}
+                      hover
+                      sx={{
+                        backgroundColor: idx % 2 === 0 ? "#ffffff" : "#f3f4f6",
+                      }}
+                    >
                       <TableCell>{candidate.id}</TableCell>
                       <TableCell>{candidate.email}</TableCell>
                       <TableCell>{candidate.name}</TableCell>
@@ -509,8 +513,9 @@ const HrAssitant = () => {
           </div>
         </div>
       </div>
+
       {/* Navigation Buttons */}
-      <div className="w-full max-w-[1250px] mx-auto mt-5 mb-5 flex justify-between">
+      <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5">
         <Link to={"/InvitedCandidates"} className="backBtn">
           Back
         </Link>
@@ -522,4 +527,4 @@ const HrAssitant = () => {
   );
 };
 
-export default HrAssitant; // ✅ this line is REQUIRED
+export default HrAssitant;
