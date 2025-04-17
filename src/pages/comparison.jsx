@@ -57,37 +57,27 @@ const handleDropDownOnChangeEvent = (e) => {
   console.log(e);
 };
 
-const column = [
+const columns = [
   {
-    accessorKey: "FileName", //normal accessorKey
-    header: "FileName",
-    size: 120,
+    accessorKey: "FileName",
+    header: "Filename",
+    Cell: ({ cell }) => (
+      <Link
+        href={cell.getValue()}
+        target="_blank"
+        underline="none"
+        sx={{ display: "flex", alignItems: "center", gap: 1 }}
+      >
+        <span noWrap>{cell.getValue()}</span>
+      </Link>
+    ),
+    size: 300,
   },
-  {
-    accessorKey: "ExistingSalary", //normal accessorKey
-    header: "ExistingSalary",
-    size: 140,
-  },
-  {
-    accessorKey: "ExpeactedSalary", //normal accessorKey
-    header: "ExpeactedSalary",
-    size: 120,
-  },
-  {
-    accessorKey: "ResignationPeriod", //normal accessorKey
-    header: "ResignationPeriod",
-    size: 140,
-  },
-  {
-    accessorKey: "Commitment", //normal accessorKey
-    header: "Commitment",
-    size: 120,
-  },
-  {
-    accessorKey: "Reference", //normal accessorKey
-    header: "Reference",
-    size: 140,
-  },
+  { accessorKey: "ExistingSalary", header: "Existing Salary", size: 120 },
+  { accessorKey: "ExpeactedSalary", header: "Expected Salary", size: 120 },
+  { accessorKey: "ResignationPeriod", header: "Resignation Period", size: 120 },
+  { accessorKey: "Commitment", header: "Commitment", size: 150 },
+  { accessorKey: "Reference", header: "Reference", size: 100 },
 ];
 
 const data = [
@@ -217,20 +207,45 @@ const Comparison = () => {
           <label className="comparisonResults">Comparison Results</label>
         </div>
 
-        <div>
-          <MaterialReactTable
-            columns={column}
-            data={data}
-            enableDensityToggle={false}
-            initialState={{ density: "compact" }}
-            columnResizeMode="onEnd"
-            positionToolbarAlertBanner="bottom"
-            enableStickyHeader
-            enableStickyFooter
-            enableColumnResizing
-          />
-        </div>
+        <MaterialReactTable
+          columns={columns}
+          data={data}
+          enableDensityToggle={false}
+          enableColumnResizing
+          enableStickyHeader
+          enableStickyFooter
+          positionToolbarAlertBanner="bottom"
+          initialState={{ density: "compact" }}
+          muiTableHeadCellProps={{
+            sx: {
+              backgroundColor: "#f7f7f7",
+              fontWeight: "bold",
+              textAlign: "center",
+            },
+          }}
+          muiTableBodyCellProps={{
+            sx: {
+              textAlign: "center",
+            },
+          }}
+          muiTablePaperProps={{
+            elevation: 0,
+            sx: {
+              borderRadius: "12px",
+              border: "1px solid #e0e0e0",
+            },
+          }}
+          muiTableBodyProps={{
+            sx: {
+              "& tr:nth-of-type(odd)": {
+                backgroundColor: "#f9f9f9",
+              },
+            },
+          }}
+        />
       </div>
+
+      <div className="w-full max-w-[1250px] mx-auto rounded-xl mb-12"></div>
     </>
   );
 };
