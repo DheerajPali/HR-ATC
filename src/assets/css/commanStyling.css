@@ -1,0 +1,27 @@
+.drp-Container .ant-select.ant-select-outlined {
+    height: 40px;
+}
+
+.btn {
+    color: #fff !important;
+    background-color: #0093EF !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+.backBtn {
+    border: 1px solid #182132;
+    color: #182132 !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Folder Management */
+.drpFolderManagement {
+    width: 320px;
+}
