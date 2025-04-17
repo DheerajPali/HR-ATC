@@ -512,16 +512,15 @@ const HrAssitant = () => {
             </TableContainer>
           </div>
         </div>
-      </div>
-
-      {/* Navigation Buttons */}
-      <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5">
-        <Link to={"/InvitedCandidates"} className="backBtn">
-          Back
-        </Link>
-        <Link to={"/HrAssitant"} className="btn">
-          Refresh Table
-        </Link>
+        {/* Navigation Buttons */}
+        <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5 mb-5">
+          <Link to={"/InvitedCandidates"} className="backBtn">
+            Back
+          </Link>
+          <Link to={"/HrAssitant"} className="btn">
+            Refresh Table
+          </Link>
+        </div>
       </div>
     </>
   );
