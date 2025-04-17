@@ -1,3 +1,8 @@
+import SimpleLineChart from "../components/SimpleLineChart";
+import ProgressBar from "../components/ProgressBar";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import recentImg1 from "../assets/images/recent-img1.png";
+import BarChartComponent from "../components/candidateTrafficChart";
 const Home = () => {
   return (
     <>

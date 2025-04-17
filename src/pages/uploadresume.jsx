@@ -1,6 +1,6 @@
-import { Select, Button } from "antd";
+import { Button, Select, Upload } from "antd";
 import { Link } from "react-router-dom";
-
+import { InboxOutlined } from "@ant-design/icons";
 const departmentOptions = [
   { value: "Marketing", label: "Marketing" },
   {
@@ -42,6 +42,7 @@ const departmentOptions = [
     label: "Designing",
   },
 ];
+
 const yeatOption = [
   { value: "2024", label: "2024" },
   { value: "2025", label: "2025" },
@@ -49,6 +50,13 @@ const yeatOption = [
   { value: "2027", label: "2027" },
   { value: "2028", label: "2028" },
 ];
+
+const uploadedFileProps = {
+  name: "file",
+  multiple: true,
+};
+
+const { Dragger } = Upload;
 
 const UploadResume = () => {
   return (
@@ -97,16 +105,78 @@ const UploadResume = () => {
             </div>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="mt-10 flex justify-between">
-            <Link to={"/foldermanagement"} className="backBtn">
-              Back
-            </Link>
-            <Link to={"/UploadResume"} className="btn">
-              Next
-            </Link>
+          <div className="mt-10 mb-2">
+            <label className="font-medium">Upload resumes upto 30 </label>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+            <Dragger className="uploadedDoc" {...uploadedFileProps}>
+              <p className="ant-upload-drag-icon">
+                <InboxOutlined />
+              </p>
+              <p className="ant-upload-text">Drap and drop files here</p>
+              <p className="ant-upload-hint">
+                Limited 200 MB per files - DOCX, PDF
+              </p>
+            </Dragger>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-end">
+            <Button className="uploadResumeFileBtn">Upload Resumes File</Button>
           </div>
         </div>
+      </div>
+
+      {/* Upload Job Description */}
+      <div className="py-2 px-4 sm:px-10 md:px-20">
+        <div className="w-full max-w-[1250px] mx-auto rounded-xl bg-white shadow-md p-12">
+          <div className="mb-2">
+            <label className="uploadJobDescription">
+              Upload Job Descriptions{" "}
+            </label>
+          </div>
+
+          <div className="mb-2 mt-8">
+            <label className="uploadJobDescSubHeader">
+              Upload a PDF or docx file
+            </label>
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
+            {/* Upload Container */}
+            <div className="flex flex-1 p-4 border border-dashed border-gray-300 rounded-md justify-between  items-center  uploadJobDescContainer">
+              <div className="">
+                <label className="block text-gray-700 font-medium mb-2">
+                  Drag and drop files here
+                </label>
+                <h4 className="text-gray-500 text-sm">
+                  Limit 200MB per file • DOCX, PDF
+                </h4>
+              </div>
+              <div>
+                <Upload>
+                  <Button className="w-full sm:w-auto">Browse Files</Button>
+                </Upload>
+              </div>
+            </div>
+
+            {/* Upload Button */}
+            <div className="flex justify-center items-center">
+              <Button className="w-full sm:w-auto uploadResumeFileBtn">
+                Upload JD
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex flex-col sm:flex-row sm:justify-between gap-6 w-full max-w-[1250px] mx-auto rounded-xl p-12">
+        <Link to={"/foldermanagement"} className="backBtn">
+          Back
+        </Link>
+        <Link to={"/comparison"} className="btn">
+          Next
+        </Link>
       </div>
     </>
   );
