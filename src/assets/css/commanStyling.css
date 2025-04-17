@@ -25,3 +25,101 @@
 .drpFolderManagement {
     width: 320px;
 }
+
+
+/* Uploadresume */
+
+.uploadedDoc {
+    width: 100%;
+}
+
+.uploadedDoc .ant-upload-list.ant-upload-list-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    -moz-column-gap: 10px;
+    column-gap: 0px;
+    margin-top: 10px;
+}
+
+.uploadedDoc .ant-upload-list.ant-upload-list-text .ant-upload-list-item-container {
+    padding: 5px;
+    border: 1px solid #D8DEEB;
+    border-radius: 4px;
+    width: 316px;
+    margin-right: 5%;
+}
+
+.uploadedDoc .ant-upload-list.ant-upload-list-text .ant-upload-list-item-container .ant-upload-list-item {
+    margin-top: 0px;
+}
+
+.uploadedDoc .ant-upload-list.ant-upload-list-text .ant-upload-list-item.ant-upload-list-item-error .ant-upload-icon {
+    display: none;
+}
+
+.uploadedDoc .ant-upload-list.ant-upload-list-text .ant-upload-list-item-container .ant-upload-list-item-name {
+    color: #1D2943;
+}
+
+.uploadResumeFileBtn {
+    color: #0093EF;
+    border-color: #0093EF;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.uploadJobDescription {
+    color: #1D2943;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+.uploadJobDescSubHeader {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.uploadJobDescContainer {
+    width: 70%;
+    border: 1px solid #C6DAED;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.uploadJobDescContainer label {
+    font-weight: 600;
+    color: #1D2943;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.uploadJobDescContainer h4 {
+    color: #1D2943;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.JDUploadContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* comparison */
+.comparisonResults {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}

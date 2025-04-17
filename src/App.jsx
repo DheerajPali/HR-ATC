@@ -12,7 +12,7 @@ import SendInvitation from "./pages/sendinvitation";
 import InvitedCandidates from "./pages/invitedcandidates";
 import HrAssitant from "./pages/hrassistant";
 import LandingPageDesign from "./components/LandingPageDesign";
-
+import Home from "./pages/Home";
 function App() {
   const [count, setCount] = useState(0);
   return (
@@ -23,7 +23,7 @@ function App() {
         </div>
       </header>
       <Routes>
-        <Route path="/" element={<ResumeFetching />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/ResumeFetching" element={<ResumeFetching />} />
         <Route path="/FolderManagement" element={<FolderManagement />} />
         <Route path="/UploadResume" element={<UploadResume />} />
