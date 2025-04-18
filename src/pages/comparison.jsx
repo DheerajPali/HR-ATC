@@ -2,56 +2,7 @@ import { Button, Select, Upload } from "antd";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MaterialReactTable } from "material-react-table";
-
-const departmentOptions = [
-  { value: "Marketing", label: "Marketing" },
-  {
-    value: "Enterpise Integration",
-    label: "Enterpise Integration",
-  },
-  {
-    value: "Power Automate Developer",
-    label: "Power Automate Developer",
-  },
-  { value: "Hamber", label: "Hamber" },
-  {
-    value: "Sales & Marketing",
-    label: "Sales & Marketing",
-  },
-  {
-    value: "Enterpise Developer",
-    label: "Enterpise Developer",
-  },
-  { value: "CRM", label: "CRM" },
-  {
-    value: "AI",
-    label: "AI",
-  },
-  {
-    value: "Techinal Lead - India C",
-    label: "Techinal Lead - India C",
-  },
-  {
-    value: "Azure & Infra",
-    label: "Azure & Infra",
-  },
-  {
-    value: "Data & Analytics",
-    label: "Data & Analytics",
-  },
-  {
-    value: "Designing",
-    label: "Designing",
-  },
-];
-
-const yeatOption = [
-  { value: "2024", label: "2024" },
-  { value: "2025", label: "2025" },
-  { value: "2026", label: "2026" },
-  { value: "2027", label: "2027" },
-  { value: "2028", label: "2028" },
-];
+import allData from "../assets/comman";
 
 const handleDropDownOnChangeEvent = (e) => {
   console.log(e);
@@ -148,27 +99,31 @@ const Comparison = () => {
             {/* Department Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Department</label>
-              <Select
-                id="drpDepartment"
-                placeholder="Select Department"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={departmentOptions}
-                onChange={(e) => handleDropDownOnChangeEvent(e)}
-              />
+              <div className="drp-Container">
+                <Select
+                  id="drpDepartment"
+                  placeholder="Select Department"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.departmentData}
+                  onChange={(e) => handleDropDownOnChangeEvent(e)}
+                />
+              </div>
             </div>
 
             {/* New Year Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Year</label>
-              <Select
-                id="drpYear"
-                placeholder="Select Year"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={yeatOption}
-                onChange={(e) => handleDropDownOnChangeEvent(e)}
-              />
+              <div className="drp-Container">
+                <Select
+                  id="drpYear"
+                  placeholder="Select Year"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.yearOption}
+                  onChange={(e) => handleDropDownOnChangeEvent(e)}
+                />
+              </div>
             </div>
           </div>
 
@@ -176,23 +131,27 @@ const Comparison = () => {
             {/* Department Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Resumes</label>
-              <Select
-                placeholder="Select Resumes"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={departmentOptions}
-              />
+              <div className="drp-Container">
+                <Select
+                  placeholder="Select Resumes"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.departmentData}
+                />
+              </div>
             </div>
 
             {/* New Year Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Job Description</label>
-              <Select
-                placeholder="Select JD"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={yeatOption}
-              />
+              <div className="drp-Container">
+                <Select
+                  placeholder="Select JD"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.yearOption}
+                />
+              </div>
             </div>
           </div>
 
@@ -248,23 +207,36 @@ const Comparison = () => {
       <div className="w-full max-w-[1250px] mx-auto rounded-xl mb-12">
         <div className="topResultContainer">
           <label>Filter Top-Rated Results</label>
-          <Select
-            placeholder="Select Top Rated Results"
-            className="drpFolderManagement mt-2"
-            style={{ width: "100%" }}
-            options={yeatOption}
-          />
+          <div className="drp-Container">
+            <Select
+              placeholder="Select Top Rated Results"
+              className="drpFolderManagement mt-2"
+              style={{ width: "100%" }}
+              options={allData.yearOption}
+            />
+          </div>
         </div>
       </div>
 
       {/* Navigation Buttons */}
-      <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5 mb-5">
-        <Link to={"/uploadresume"} className="backBtn">
-          Back
-        </Link>
-        <Link to={"/SendInvitation"} className="btn">
-          Next
-        </Link>
+      <div className="mb-10 px-4 sm:px-10 md:px-20">
+        <div className="w-full max-w-[1250px] mx-auto">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-10">
+            <Link
+              to={"/uploadresume"}
+              class="border border-black text-black font-medium py-2 px-6 rounded hover:bg-gray-100 transition"
+            >
+              ◀ BACK
+            </Link>
+            <Link
+              id="nextBtn"
+              to={"/SendInvitation"}
+              class="text-white font-semibold py-2 px-6 rounded hover:bg-blue-600 transition"
+            >
+              NEXT ▶
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

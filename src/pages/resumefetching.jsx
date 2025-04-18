@@ -1,55 +1,7 @@
 import { Link } from "react-router-dom";
 import "../assets/css/commanStyling.css";
 import { Select } from "antd";
-const departmentOptions = [
-  { value: "Marketing", label: "Marketing" },
-  {
-    value: "Enterpise Integration",
-    label: "Enterpise Integration",
-  },
-  {
-    value: "Power Automate Developer",
-    label: "Power Automate Developer",
-  },
-  { value: "Hamber", label: "Hamber" },
-  {
-    value: "Sales & Marketing",
-    label: "Sales & Marketing",
-  },
-  {
-    value: "Enterpise Developer",
-    label: "Enterpise Developer",
-  },
-  { value: "CRM", label: "CRM" },
-  {
-    value: "AI",
-    label: "AI",
-  },
-  {
-    value: "Techinal Lead - India C",
-    label: "Techinal Lead - India C",
-  },
-  {
-    value: "Azure & Infra",
-    label: "Azure & Infra",
-  },
-  {
-    value: "Data & Analytics",
-    label: "Data & Analytics",
-  },
-  {
-    value: "Designing",
-    label: "Designing",
-  },
-];
-
-const yearOption = [
-  { value: "2024", label: "2024" },
-  { value: "2025", label: "2025" },
-  { value: "2026", label: "2026" },
-  { value: "2027", label: "2027" },
-  { value: "2028", label: "2028" },
-];
+import allData from "../assets/comman";
 const ResumeFetching = () => {
   return (
     <>
@@ -97,7 +49,7 @@ const ResumeFetching = () => {
               placeholder="Select Department"
               className="w-full"
               style={{ flex: 1 }}
-              options={departmentOptions}
+              options={allData.departmentData}
             />
           </div>
 
@@ -116,13 +68,17 @@ const ResumeFetching = () => {
               placeholder="Select New Year"
               className="w-full"
               style={{ flex: 1 }}
-              options={yearOption}
+              options={allData.yearOption}
             />
           </div>
 
-          <div className="mt-10 flex justify-end">
-            <Link className="btn" to={"/foldermanagement"}>
-              NEXT
+          <div class="flex flex-col sm:flex-row justify-end items-center gap-4 mt-10">
+            <Link
+              id="nextBtn"
+              to={"/foldermanagement"}
+              class="text-white font-semibold py-2 px-6 rounded hover:bg-blue-600 transition"
+            >
+              NEXT ▶
             </Link>
           </div>
         </div>

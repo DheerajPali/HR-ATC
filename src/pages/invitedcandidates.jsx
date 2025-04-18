@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import "../assets/css/commanStyling.css";
+
 import {
   Table,
   TableBody,
@@ -166,14 +168,26 @@ const InvitedCandidates = () => {
             </TableContainer>
           </div>
         </div>
+
         {/* Navigation Buttons */}
-        <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5">
-          <Link to={"/SendInvitation"} className="backBtn">
-            Back
-          </Link>
-          <Link to={"/HrAssitant"} className="btn">
-            Next
-          </Link>
+        <div className="mb-10 px-4 sm:px-10 md:px-20">
+          <div className="w-full max-w-[1250px] mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-10">
+              <Link
+                to={"/SendInvitation"}
+                class="border border-black text-black font-medium py-2 px-6 rounded hover:bg-gray-100 transition"
+              >
+                ◀ BACK
+              </Link>
+              <Link
+                id="nextBtn"
+                to={"/HrAssitant"}
+                class="text-white font-semibold py-2 px-6 rounded hover:bg-blue-600 transition"
+              >
+                NEXT ▶
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

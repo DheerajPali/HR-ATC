@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Select, Button } from "antd";
+import allData from "../assets/comman";
 
 const headings = [
   "No.",
@@ -20,236 +21,6 @@ const headings = [
   "Test Report URL",
   "Score",
   "Experience",
-];
-
-const departmentOptions = [
-  { value: "Marketing", label: "Marketing" },
-  {
-    value: "Enterpise Integration",
-    label: "Enterpise Integration",
-  },
-  {
-    value: "Power Automate Developer",
-    label: "Power Automate Developer",
-  },
-  { value: "Hamber", label: "Hamber" },
-  {
-    value: "Sales & Marketing",
-    label: "Sales & Marketing",
-  },
-  {
-    value: "Enterpise Developer",
-    label: "Enterpise Developer",
-  },
-  { value: "CRM", label: "CRM" },
-  {
-    value: "AI",
-    label: "AI",
-  },
-  {
-    value: "Techinal Lead - India C",
-    label: "Techinal Lead - India C",
-  },
-  {
-    value: "Azure & Infra",
-    label: "Azure & Infra",
-  },
-  {
-    value: "Data & Analytics",
-    label: "Data & Analytics",
-  },
-  {
-    value: "Designing",
-    label: "Designing",
-  },
-];
-const yearOptions = [
-  { value: "2024", label: "2024" },
-  { value: "2025", label: "2025" },
-  { value: "2026", label: "2026" },
-  { value: "2027", label: "2027" },
-  { value: "2028", label: "2028" },
-];
-const resumeOptions = [
-  {
-    value: "Resume_Application_Developer",
-    label: "Resume for Application Developer",
-  },
-  { value: "Resume_SEO", label: "Resume for SEO" },
-  { value: "Resume_Marketing", label: "Resume for Marketing" },
-  {
-    value: "Resume_Power_Automate",
-    label: "Resume for Power Automate Developer",
-  },
-  {
-    value: "Resume_Enterprise_Integration",
-    label: "Resume for Enterprise Integration",
-  },
-  {
-    value: "Resume_Enterprise_Developer",
-    label: "Resume for Enterprise Developer",
-  },
-  { value: "Resume_CRM", label: "Resume for CRM" },
-  { value: "Resume_AI", label: "Resume for AI" },
-  { value: "Resume_Tech_Lead", label: "Resume for Technical Lead" },
-  { value: "Resume_Azure_Infra", label: "Resume for Azure & Infra" },
-  { value: "Resume_Data_Analytics", label: "Resume for Data & Analytics" },
-  { value: "Resume_Designer", label: "Resume for Designer" },
-];
-
-const jobDescriptionOptions = [
-  {
-    value: "LLM_Application_Developer_JD_1",
-    label: "LLM_Application_Developer_JD_1",
-  },
-  { value: "MRF_-_Content_Writing", label: "MRF_-_Content_Writing" },
-  {
-    value: "MRF_Business_Dev._Manager_South",
-    label: "MRF_Business_Dev._Manager_South",
-  },
-  {
-    value: "MRF_D365_F&O_Finance_Consultant_11-02-2024",
-    label: "MRF_D365_F&O_Finance_Consultant_11-02-2024",
-  },
-  {
-    value: "MRF_Data&Analytics_TechLead",
-    label: "MRF_Data&Analytics_TechLead",
-  },
-  { value: "MRF_ISR_South", label: "MRF_ISR_South" },
-  { value: "Marketing_Manager-_MRF", label: "Marketing_Manager-_MRF" },
-  {
-    value: "Security_&_Complaince_Lead_MRF_13th_June_2024",
-    label: "Security_&_Complaince_Lead_MRF_13th_June_2024",
-  },
-  { value: "Software_Engineer_MRF_V1.1", label: "Software_Engineer_MRF_V1.1" },
-  {
-    value: "Sr_Software_Engineer_MRF_V1.2",
-    label: "Sr_Software_Engineer_MRF_V1.2",
-  },
-];
-
-const candidatesData = [
-  {
-    id: 30,
-    email: "dheerajpali@gmail.com",
-    name: "Dheeraj Pali",
-    comments: "good knowledge of...",
-    department: "Modern Workplace",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.5",
-    experience: "2 Years",
-  },
-  {
-    id: 31,
-    email: "ajaygajjar@gmail.com",
-    name: "Ajay Gajjar",
-    comments: "excellent logical thinking",
-    department: "DevOps",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.8",
-    experience: "4 Years",
-  },
-  {
-    id: 30,
-    email: "anuprathod@gmail.com",
-    name: "Anup Rathod",
-    comments: "good knowledge of...",
-    department: "Azure & Infra",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.5",
-    experience: "5 Years",
-  },
-  {
-    id: 31,
-    email: "chiragraval@gmail.com",
-    name: "Chirag Raval",
-    comments: "excellent logical thinking",
-    department: "Modern Workplace & DevOps",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.8",
-    experience: "7 Years",
-  },
-  {
-    id: 30,
-    email: "Vivekrocks21@gmail.com",
-    name: "Vivek Kumar Tandel",
-    comments: "good knowledge of...",
-    department: "Azure & Infra",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.5",
-    experience: "5 Years",
-  },
-  {
-    id: 31,
-    email: "someone@example.com",
-    name: "Anjali Mehta",
-    comments: "excellent logical thinking",
-    department: "DevOps",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.8",
-    experience: "4 Years",
-  },
-  {
-    id: 30,
-    email: "dheerajpali@gmail.com",
-    name: "Dheeraj Pali",
-    comments: "good knowledge of...",
-    department: "Modern Workplace",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.5",
-    experience: "2 Years",
-  },
-  {
-    id: 31,
-    email: "ajaygajjar@gmail.com",
-    name: "Ajay Gajjar",
-    comments: "excellent logical thinking",
-    department: "DevOps",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.8",
-    experience: "4 Years",
-  },
-  {
-    id: 30,
-    email: "anuprathod@gmail.com",
-    name: "Anup Rathod",
-    comments: "good knowledge of...",
-    department: "Azure & Infra",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.5",
-    experience: "5 Years",
-  },
-  {
-    id: 31,
-    email: "chiragraval@gmail.com",
-    name: "Chirag Raval",
-    comments: "excellent logical thinking",
-    department: "Modern Workplace & DevOps",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.8",
-    experience: "7 Years",
-  },
-  {
-    id: 30,
-    email: "Vivekrocks21@gmail.com",
-    name: "Vivek Kumar Tandel",
-    comments: "good knowledge of...",
-    department: "Azure & Infra",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.5",
-    experience: "5 Years",
-  },
-  {
-    id: 31,
-    email: "someone@example.com",
-    name: "Anjali Mehta",
-    comments: "excellent logical thinking",
-    department: "DevOps",
-    reportUrl: "https://app.imocha.io/PDFReport?",
-    score: "0.8",
-    experience: "4 Years",
-  },
-  // add more candidates here...
 ];
 
 const HrAssitant = () => {
@@ -277,46 +48,54 @@ const HrAssitant = () => {
             {/* Department Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Department</label>
-              <Select
-                placeholder="Select Department"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={departmentOptions}
-              />
+              <div className="drp-Container">
+                <Select
+                  placeholder="Select Department"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.departmentData}
+                />
+              </div>
             </div>
 
             {/* New Year Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Year</label>
-              <Select
-                placeholder="Select Year"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={yearOptions}
-              />
+              <div className="drp-Container">
+                <Select
+                  placeholder="Select Year"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.yearOption}
+                />
+              </div>
             </div>
           </div>
           <div className=" mt-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             {/* Department Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Resume</label>
-              <Select
-                placeholder="Select Resume"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={resumeOptions}
-              />
+              <div className="drp-Container">
+                <Select
+                  placeholder="Select Resume"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.resumeOptions}
+                />
+              </div>
             </div>
 
             {/* New Year Dropdown */}
             <div className="flex flex-col flex-1">
               <label className="mb-2 font-medium">Job Description</label>
-              <Select
-                placeholder="Select Job Description"
-                className="drpFolderManagement"
-                style={{ width: "100%" }}
-                options={jobDescriptionOptions}
-              />
+              <div className="drp-Container">
+                <Select
+                  placeholder="Select Job Description"
+                  className="drpFolderManagement"
+                  style={{ width: "100%" }}
+                  options={allData.jobDescriptionOptions}
+                />
+              </div>
             </div>
           </div>
           <div className="mt-10 flex justify-end">
@@ -479,7 +258,7 @@ const HrAssitant = () => {
                 </TableHead>
 
                 <TableBody>
-                  {candidatesData.map((candidate, idx) => (
+                  {allData.candidatesData.map((candidate, idx) => (
                     <TableRow
                       key={idx}
                       hover
@@ -514,8 +293,11 @@ const HrAssitant = () => {
         </div>
         {/* Navigation Buttons */}
         <div className="w-full max-w-[1250px] mx-auto  flex justify-between mt-5 mb-5">
-          <Link to={"/InvitedCandidates"} className="backBtn">
-            Back
+          <Link
+            to={"/InvitedCandidates"}
+            class="border border-black text-black font-medium py-2 px-6 rounded hover:bg-gray-100 transition"
+          >
+            ◀ BACK
           </Link>
           <Link to={"/HrAssitant"} className="btn">
             Refresh Table

@@ -23,12 +23,14 @@ const SendInvitation = () => {
         <div className="w-full max-w-[1250px] mx-auto rounded-xl">
           <div className="topResultContainer">
             <label>Department</label>
-            <Select
-              placeholder="Select Department"
-              className="drpFolderManagement mt-2"
-              style={{ width: "100%" }}
-              options={allData.departmentData}
-            />
+            <div className="drp-Container">
+              <Select
+                placeholder="Select Department"
+                className="drpFolderManagement mt-2"
+                style={{ width: "100%" }}
+                options={allData.departmentData}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -82,12 +84,14 @@ const SendInvitation = () => {
         <div className="w-full max-w-[1250px] mx-auto rounded-xl">
           <div className="topResultContainer">
             <label>Division (test)</label>
-            <Select
-              placeholder="Select Division (test)"
-              className="drpFolderManagement mt-2"
-              style={{ width: "100%" }}
-              options={allData.departmentData}
-            />
+            <div className="drp-Container">
+              <Select
+                placeholder="Select Division (test)"
+                className="drpFolderManagement mt-2"
+                style={{ width: "100%" }}
+                options={allData.departmentData}
+              />
+            </div>
           </div>
         </div>
       </div>

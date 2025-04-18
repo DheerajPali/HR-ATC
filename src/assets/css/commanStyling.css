@@ -2,6 +2,15 @@
     height: 40px;
 }
 
+.drp-Container .ant-select.ant-select-outlined .ant-select-selector {
+    border: 1px solid #636B7C;
+}
+
+.drp-Container .ant-select-selection-placeholder {
+    color: #636B7C;
+    font-weight: 400;
+}
+
 .btn {
     color: #fff !important;
     background-color: #0093EF !important;
@@ -150,4 +159,27 @@
 /* datePicker */
 .datePickerContainer .ant-picker.ant-picker-outlined {
     width: 288px;
+    height: 40px;
+    border-color: #636B7C;
+}
+
+.ant-picker-ok button {
+    background-color: #0093EF;
+    color: #fff;
+}
+
+#nextBtn {
+    background-color: #0093EF;
+}
+
+#createUserBtn button {
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    border-color: #636B7C;
+}
+
+#createUserBtn button:hover {
+    color: #636B7C;
+    font-weight: 500;
 }
